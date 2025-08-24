@@ -519,6 +519,7 @@ body {
 .congratulations-section {
     text-align: center;
     margin-bottom: 30px;
+    margin-top: 40px; /* Üstte daha fazla boşluk */
 }
 
 .congratulations-title {
@@ -557,7 +558,7 @@ body {
 }
 
 .description-text {
-    font-size: 16px;
+    font-size: 20px; /* 16px + 4px = 20px (sorulardan 4px büyük) */
     font-weight: 300; /* Light */
     color: #FFFFFF;
     font-family: 'Rawest', sans-serif;
@@ -571,7 +572,6 @@ body {
 
 .option-item {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     padding: 10px 0;
@@ -582,7 +582,8 @@ body {
     font-weight: 300; /* Light */
     color: #FFFFFF;
     font-family: 'Rawest', sans-serif;
-    flex: 1;
+    width: 400px; /* Sabit genişlik - sol hizalama için */
+    text-align: left; /* Sol hizalama */
 }
 
 .option-accept {
@@ -596,7 +597,7 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-left: 20px;
+    margin-left: auto; /* Sağa yasla */
 }
 
 .option-accept:hover {
