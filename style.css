@@ -74,7 +74,7 @@ body {
     height: 880px; /* Küçültüldü: 1400 * 0.63 */
     margin: 0 auto;
     padding: 60px 60px 60px 60px; /* Tüm taraflardan eşit boşluk */
-    background-color: #ffffff; /* Beyaz çerçeve */
+    background-color: #DDA3C1; /* Pembe arka plan */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
