@@ -459,6 +459,10 @@ body {
 .question-section {
     margin-bottom: 50px;
     text-align: center;
+    flex: 1; /* Kalan alanı kapla */
+    display: flex;
+    align-items: center; /* Dikeyde ortala */
+    justify-content: center; /* Yatayda ortala */
 }
 
 .question-text {
@@ -469,8 +473,11 @@ body {
 
 .buttons-section {
     display: flex;
-    gap: 20px;
+    gap: 40px; /* Butonlar arası mesafe artırıldı */
     justify-content: center;
+    align-items: center;
+    margin-top: -20px; /* Biraz yukarı al */
+    padding: 0 60px; /* Sağ-sol eşit uzaklık için padding */
 }
 
 .accept-button, .cancel-button {
@@ -485,6 +492,8 @@ body {
     letter-spacing: 0.5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    flex: 1; /* Eşit genişlik */
+    max-width: 150px; /* Maksimum genişlik sınırı */
 }
 
 .accept-button:hover, .cancel-button:hover {
