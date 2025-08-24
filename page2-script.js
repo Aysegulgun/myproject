@@ -27,8 +27,15 @@ document.addEventListener('DOMContentLoaded', function() {
 // Accept button function
 function acceptAction() {
     console.log('User accepted memory recovery');
-    alert('Memory recovery accepted! Processing...');
-    // Here you can add navigation to next page or memory recovery logic
+    
+    // Get user name and store it
+    const userName = localStorage.getItem('userName');
+    if (userName) {
+        localStorage.setItem('userName', userName);
+    }
+    
+    // Navigate to page 3
+    window.location.href = 'page3.html';
 }
 
 // Cancel button function

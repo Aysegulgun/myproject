@@ -506,6 +506,127 @@ body {
     color: #DDA3C1;
 }
 
+/* Page 3 Specific Styles - Long narrow format with scroll */
+.page3.main-panel {
+    width: 600px; /* Dar genişlik */
+    height: 800px; /* Uzun yükseklik */
+    overflow-y: auto; /* Dikey scroll */
+    overflow-x: hidden; /* Yatay scroll yok */
+    padding: 30px; /* İç boşluk */
+    justify-content: flex-start; /* Üstten başla */
+}
+
+.congratulations-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.congratulations-title {
+    font-size: 28px;
+    font-weight: 700; /* Bold */
+    color: #FFFFFF;
+    margin-bottom: 15px;
+    font-family: 'Rawest', sans-serif;
+}
+
+.congrats-word {
+    font-weight: 700; /* Bold */
+}
+
+.name-display {
+    font-weight: 700; /* Bold */
+    color: #DDA3C1; /* Pembe renk */
+}
+
+.update-status {
+    font-size: 32px;
+    font-weight: 500; /* Medium */
+    color: #FFFFFF;
+    margin: 0;
+    font-family: 'Rawest', sans-serif;
+    line-height: 1.2;
+}
+
+.updated-word {
+    font-weight: 500; /* Medium */
+}
+
+.description-section {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.description-text {
+    font-size: 16px;
+    font-weight: 300; /* Light */
+    color: #FFFFFF;
+    font-family: 'Rawest', sans-serif;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.options-section {
+    margin-bottom: 40px;
+}
+
+.option-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.option-text {
+    font-size: 16px;
+    font-weight: 300; /* Light */
+    color: #FFFFFF;
+    font-family: 'Rawest', sans-serif;
+    flex: 1;
+}
+
+.option-accept {
+    background-color: #DDA3C1; /* Pembe renk */
+    color: #FFFFFF;
+    border: 2px solid #DDA3C1;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-family: 'Rawest', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.option-accept:hover {
+    background-color: transparent;
+    color: #DDA3C1;
+}
+
+.print-section {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.print-button {
+    background-color: #DDA3C1; /* Pembe renk */
+    color: #FFFFFF;
+    border: 2px solid #DDA3C1;
+    border-radius: 4px;
+    padding: 12px 40px;
+    font-family: 'Rawest', sans-serif;
+    font-weight: 400; /* Regular */
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.print-button:hover {
+    background-color: transparent;
+    color: #DDA3C1;
+}
+
 .initiation-word {
     font-family: 'Rawest', sans-serif;
     font-weight: 600; /* SemiBold */
