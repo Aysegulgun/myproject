@@ -112,14 +112,14 @@ body {
     height: 630px; /* Küçültüldü: 1000 * 0.63 */
     padding: 50px 50px 50px 50px; /* Tüm taraflardan eşit boşluk */
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 1. sayfa için ortalama */
+    align-items: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     border: 6px solid #1E1E20; /* 6px füme border eklendi */
     margin: 0; /* Margin kaldırıldı - container merkezliyor */
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 /* System Header */
@@ -407,6 +407,7 @@ body {
 .system-prompt-word {
     font-family: 'Rawest', sans-serif;
     font-weight: 300; /* Light */
+    font-size: 16px; /* Küçültüldü */
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -430,15 +431,29 @@ body {
 .page2 .system-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start; /* Üstte hizala */
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 30px; /* Daha az boşluk */
+    margin-top: 0; /* Üstte boşluk yok */
 }
 
 .page2 .system-title-left {
     display: flex;
     align-items: center;
-    gap: 15px; /* İkon ve yazı arası boşluk */
+    gap: 8px; /* İkon ve yazı arası boşluk - azaltıldı */
+    margin-top: 0; /* Üstte boşluk yok */
+}
+
+/* Page 2 için danger icon boyutu - S harfi ile aynı yükseklik */
+.page2 .danger-icon {
+    height: 16px; /* SYSTEM PROMPT font-size ile aynı */
+    width: auto;
+}
+
+/* Page 2 için özel main-panel düzeni */
+.page2 .main-panel {
+    justify-content: flex-start; /* 2. sayfa için üstten başla */
+    padding: 20px 50px 50px 50px; /* Üst padding azaltıldı */
 }
 
 .question-section {
@@ -449,6 +464,7 @@ body {
 .question-text {
     font-size: 24px;
     margin: 0;
+    text-align: center; /* Tam ortala */
 }
 
 .buttons-section {
