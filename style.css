@@ -435,6 +435,12 @@ body {
     margin-bottom: 50px;
 }
 
+.page2 .system-title-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* İkon ve yazı arası boşluk */
+}
+
 .question-section {
     margin-bottom: 50px;
     text-align: center;
