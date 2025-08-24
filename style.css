@@ -587,9 +587,9 @@ body {
 }
 
 .option-accept {
-    background-color: #DDA3C1; /* Pembe renk */
-    color: #FFFFFF;
-    border: 2px solid #DDA3C1;
+    background-color: transparent; /* Arka plan şeffaf */
+    color: #DDA3C1; /* Pembe yazı */
+    border: none; /* Border kaldırıldı */
     border-radius: 4px;
     padding: 8px 20px;
     font-family: 'Rawest', sans-serif;
@@ -613,12 +613,13 @@ body {
 .print-button {
     background-color: #DDA3C1; /* Pembe renk */
     color: #FFFFFF;
-    border: 2px solid #DDA3C1;
-    border-radius: 4px;
-    padding: 12px 40px;
+    border: 3px solid #FFFFFF; /* Beyaz border 3px - diğer butonlarla aynı */
+    border-radius: 4px; /* Diğer butonlarla aynı */
+    padding: 9px 25px; /* Diğer butonlarla aynı */
     font-family: 'Rawest', sans-serif;
-    font-weight: 400; /* Regular */
-    font-size: 16px;
+    font-weight: 300; /* Light - diğer butonlarla aynı */
+    font-size: 28px; /* Diğer butonlarla aynı */
+    letter-spacing: 0.3px; /* Diğer butonlarla aynı */
     cursor: pointer;
     transition: all 0.3s ease;
 }
