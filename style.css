@@ -517,6 +517,19 @@ body {
     border: 3px solid #FFFFFF; /* Beyaz border 3px */
 }
 
+/* Page 3 Container - diğer sayfalardaki gibi aynı padding */
+.page3 .container {
+    padding: 60px 125px 60px 125px; /* İlk sayfalardaki gibi - header hizalaması için */
+}
+
+/* Page 3 Header - patch bitişi ile füme kutu bitişi aynı hizada */
+.page3 .header {
+    text-align: right; /* Sağa hizala - patch bitişi ile kutu bitişi aynı */
+    width: 100%;
+    align-self: stretch;
+    position: relative;
+}
+
 .congratulations-section {
     text-align: center;
     margin-bottom: 30px;
@@ -639,6 +652,19 @@ body {
     padding: 30px; /* 3. sayfa ile aynı */
     justify-content: flex-start; /* 3. sayfa ile aynı */
     border: 3px solid #FFFFFF; /* 3. sayfa ile aynı */
+}
+
+/* Page 4 Container - diğer sayfalardaki gibi aynı padding */
+.page4 .container {
+    padding: 60px 125px 60px 125px; /* İlk sayfalardaki gibi - header hizalaması için */
+}
+
+/* Page 4 Header - patch bitişi ile füme kutu bitişi aynı hizada */
+.page4 .header {
+    text-align: right; /* Sağa hizala - patch bitişi ile kutu bitişi aynı */
+    width: 100%;
+    align-self: stretch;
+    position: relative;
 }
 
 /* Print version Accept - not clickable, just text */
