@@ -537,11 +537,11 @@ body {
 
 .name-display {
     font-weight: 700; /* Bold */
-    color: #DDA3C1; /* Pembe renk */
+    color: #FFFFFF; /* Beyaz renk */
 }
 
 .update-status {
-    font-size: 32px;
+    font-size: 34px; /* 32px + 2px = 34px */
     font-weight: 500; /* Medium */
     color: #FFFFFF;
     margin: 0;
