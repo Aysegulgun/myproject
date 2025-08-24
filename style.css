@@ -514,6 +514,7 @@ body {
     overflow-x: hidden; /* Yatay scroll yok */
     padding: 30px; /* İç boşluk */
     justify-content: flex-start; /* Üstten başla */
+    border: 3px solid #FFFFFF; /* Beyaz border 3px */
 }
 
 .congratulations-section {
