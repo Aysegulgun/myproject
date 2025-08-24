@@ -3,6 +3,15 @@
 // Smooth loading animation
 document.addEventListener('DOMContentLoaded', function() {
     const mainPanel = document.querySelector('.main-panel');
+    const ecemElement = document.querySelector('.ecem-word');
+    
+    // Get user name from localStorage
+    const userName = localStorage.getItem('userName');
+    if (userName) {
+        ecemElement.textContent = `[${userName}]`;
+    } else {
+        ecemElement.textContent = '[User]'; // Fallback if no name
+    }
     
     // Add loading animation
     mainPanel.style.opacity = '0';
