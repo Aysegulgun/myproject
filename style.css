@@ -630,6 +630,31 @@ body {
     color: #DDA3C1;
 }
 
+/* Page 4 Specific Styles - Print version */
+.page4.main-panel {
+    width: 600px; /* 3. sayfa ile aynı */
+    height: 800px; /* 3. sayfa ile aynı */
+    overflow-y: auto; /* 3. sayfa ile aynı */
+    overflow-x: hidden; /* 3. sayfa ile aynı */
+    padding: 30px; /* 3. sayfa ile aynı */
+    justify-content: flex-start; /* 3. sayfa ile aynı */
+    border: 3px solid #FFFFFF; /* 3. sayfa ile aynı */
+}
+
+/* Print version Accept - not clickable, just text */
+.print-accept {
+    background-color: transparent;
+    color: #DDA3C1; /* Pembe yazı - 3. sayfa ile aynı */
+    border: none;
+    border-radius: 4px;
+    padding: 8px 20px;
+    font-family: 'Rawest', sans-serif;
+    font-weight: 700; /* Bold */
+    font-size: 14px;
+    margin-left: auto; /* Sağa yasla */
+    cursor: default; /* Normal cursor - tıklanamaz */
+}
+
 .initiation-word {
     font-family: 'Rawest', sans-serif;
     font-weight: 600; /* SemiBold */

@@ -1,6 +1,6 @@
-// Page 3 Script for ID.EXE - Congratulations Page
+// Page 4 Script for ID.EXE - Print View
 
-// Database of all questions
+// Same question database as page 3
 const questionDatabase = [
     "Do you want to recover old memories?",
     "Enable TrueSelf.exe?",
@@ -79,23 +79,17 @@ const questionDatabase = [
     "Is the concept of 'self' fluid, or is it fixed?"
 ];
 
-// Function to get random questions
-function getRandomQuestions(count = 7) {
-    const shuffled = [...questionDatabase].sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, count);
-}
-
-// Function to generate question HTML
-function generateQuestionHTML(questions) {
+// Function to generate question HTML for print (no accept buttons)
+function generatePrintQuestionHTML(questions) {
     return questions.map(question => `
         <div class="option-item">
             <span class="option-text">${question}</span>
-            <button class="option-accept" onclick="acceptOption('${question}')">Accept</button>
+            <span class="option-accept print-accept">Accept</span>
         </div>
     `).join('');
 }
 
-// Smooth loading animation
+// Page load
 document.addEventListener('DOMContentLoaded', function() {
     const mainPanel = document.querySelector('.main-panel');
     const nameDisplay = document.querySelector('.name-display');
@@ -109,12 +103,20 @@ document.addEventListener('DOMContentLoaded', function() {
         nameDisplay.textContent = 'User';
     }
     
-    // Generate random questions
-    const randomQuestions = getRandomQuestions(7);
-    optionsSection.innerHTML = generateQuestionHTML(randomQuestions);
+    // Get the same questions from page 3 (from localStorage if stored, or generate new ones)
+    const storedQuestions = localStorage.getItem('currentQuestions');
+    let questionsToShow;
     
-    // Store questions for print page
-    localStorage.setItem('currentQuestions', JSON.stringify(randomQuestions));
+    if (storedQuestions) {
+        questionsToShow = JSON.parse(storedQuestions);
+    } else {
+        // If no stored questions, generate new random ones
+        const shuffled = [...questionDatabase].sort(() => 0.5 - Math.random());
+        questionsToShow = shuffled.slice(0, 7);
+    }
+    
+    // Generate print version (with non-clickable Accept text)
+    optionsSection.innerHTML = generatePrintQuestionHTML(questionsToShow);
     
     // Add loading animation
     mainPanel.style.opacity = '0';
@@ -126,60 +128,3 @@ document.addEventListener('DOMContentLoaded', function() {
         mainPanel.style.transform = 'translateY(0)';
     }, 200);
 });
-
-// Option accept function
-function acceptOption(question) {
-    console.log('Option accepted:', question);
-    alert(`"${question}" - Option accepted! Processing...`);
-}
-
-// Print function - redirect to print page
-function printPage() {
-    console.log('Print requested - redirecting to print page');
-    
-    // Store user name
-    const userName = localStorage.getItem('userName');
-    if (userName) {
-        localStorage.setItem('userName', userName);
-    }
-    
-    // Navigate to print page
-    window.location.href = 'page4.html';
-}
-
-// Reset form function for demo
-function resetForm() {
-    const nameInput = document.querySelector('.name-input');
-    const startButton = document.querySelector('.start-button');
-    const mainPanel = document.querySelector('.main-panel');
-    
-    nameInput.value = '';
-    nameInput.style.borderColor = '#52555A'; /* Normal gri renk */
-    startButton.textContent = 'Start';
-    startButton.disabled = false;
-    startButton.style.background = '#DDA3C1'; /* Güncel pembe renk */
-    
-    mainPanel.style.opacity = '1';
-    mainPanel.style.transform = 'scale(1)';
-}
-
-// Enter key support
-document.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        const nameInput = document.querySelector('.name-input');
-        if (document.activeElement === nameInput) {
-            startJourney();
-        }
-    }
-});
-
-// Add shake animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        75% { transform: translateX(5px); }
-    }
-`;
-document.head.appendChild(style);
