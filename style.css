@@ -454,10 +454,11 @@ body {
 .page2 .main-panel {
     justify-content: flex-start; /* 2. sayfa için üstten başla */
     padding: 20px 50px 50px 50px; /* Üst padding azaltıldı */
+    position: relative; /* Absolute positioning için */
 }
 
 .question-section {
-    margin-bottom: 50px;
+    margin-bottom: 20px; /* Azaltıldı - butonlar hemen altında */
     text-align: center;
     flex: 1; /* Kalan alanı kapla */
     display: flex;
@@ -476,24 +477,26 @@ body {
     gap: 40px; /* Butonlar arası mesafe artırıldı */
     justify-content: center;
     align-items: center;
-    margin-top: -20px; /* Biraz yukarı al */
-    padding: 0 60px; /* Sağ-sol eşit uzaklık için padding */
+    position: absolute; /* Sabit pozisyon */
+    bottom: 150px; /* Yerden 150px yükseklik */
+    left: 60px; /* Sol padding */
+    right: 60px; /* Sağ padding */
 }
 
 .accept-button, .cancel-button {
     background-color: #DDA3C1; /* Pembe renk */
     color: #FFFFFF;
-    border: 2px solid #DDA3C1;
-    border-radius: 8px;
-    padding: 12px 30px;
+    border: 3px solid #FFFFFF; /* Beyaz border 3px */
+    border-radius: 4px; /* Start buton ile aynı */
+    padding: 9px 25px; /* Start buton ile aynı */
     font-family: 'Rawest', sans-serif;
-    font-weight: 400; /* Regular */
-    font-size: 16px;
-    letter-spacing: 0.5px;
+    font-weight: 300; /* Light - Start buton ile aynı */
+    font-size: 28px; /* Start buton ile aynı */
+    letter-spacing: 0.3px; /* Start buton ile aynı */
     cursor: pointer;
     transition: all 0.3s ease;
     flex: 1; /* Eşit genişlik */
-    max-width: 150px; /* Maksimum genişlik sınırı */
+    max-width: 200px; /* Genişlik artırıldı - büyük font için */
 }
 
 .accept-button:hover, .cancel-button:hover {
