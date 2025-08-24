@@ -40,33 +40,14 @@ function startJourney() {
         return;
     }
     
-    // Success animation
-    startButton.textContent = 'Initializing...';
-    startButton.disabled = true;
-    startButton.style.background = '#6c757d';
+    // Direct redirect to page 2
+    console.log('Journey started for user:', name);
     
-    // Simulate system initialization
-    setTimeout(() => {
-        startButton.textContent = 'Welcome, ' + name + '!';
-        startButton.style.background = '#28a745';
-        
-        // Simulate transition to next screen
-        setTimeout(() => {
-            const mainPanel = document.querySelector('.main-panel');
-            mainPanel.style.transition = 'all 0.8s ease';
-            mainPanel.style.opacity = '0';
-            mainPanel.style.transform = 'scale(0.9)';
-            
-            setTimeout(() => {
-                // Here you can redirect to next page or update content
-                console.log('Journey started for user:', name);
-                alert('Sistem başlatılıyor... Hoş geldin, ' + name + '!');
-                
-                // Reset for demo purposes
-                resetForm();
-            }, 800);
-        }, 2000);
-    }, 1500);
+    // Store user name for next screen
+    localStorage.setItem('userName', name);
+    
+    // Navigate to page 2 immediately
+    window.location.href = 'page2.html';
 }
 
 // Reset form function for demo
