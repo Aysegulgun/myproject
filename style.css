@@ -117,7 +117,7 @@ body {
     justify-content: center; /* 1. sayfa için ortalama */
     align-items: center;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 6px solid #1E1E20; /* 6px füme border eklendi */
+    border: 3px solid #FFFFFF; /* 3px beyaz border */
     margin: 0; /* Margin kaldırıldı - container merkezliyor */
     box-sizing: border-box;
 }
