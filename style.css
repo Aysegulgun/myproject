@@ -407,7 +407,7 @@ body {
 .system-prompt-word {
     font-family: 'Rawest', sans-serif;
     font-weight: 300; /* Light */
-    font-size: 16px; /* Küçültüldü */
+    font-size: 24px; /* 20px'den 24px'e yükseltildi */
     letter-spacing: 2px;
     text-transform: uppercase;
     color: #FFFFFF;
@@ -416,6 +416,7 @@ body {
 .ecem-word {
     font-family: 'Rawest', sans-serif;
     font-weight: 400; /* Regular */
+    font-size: 24px; /* 20px'den 24px'e yükseltildi */
     color: #FFFFFF;
     letter-spacing: 1px;
 }
@@ -446,7 +447,7 @@ body {
 
 /* Page 2 için danger icon boyutu - S harfi ile aynı yükseklik */
 .page2 .danger-icon {
-    height: 16px; /* SYSTEM PROMPT font-size ile aynı */
+    height: 24px; /* SYSTEM PROMPT font-size ile aynı - 24px */
     width: auto;
 }
 
@@ -458,16 +459,17 @@ body {
 }
 
 .question-section {
-    margin-bottom: 20px; /* Azaltıldı - butonlar hemen altında */
+    margin-bottom: 0; /* Margin kaldırıldı */
     text-align: center;
-    flex: 1; /* Kalan alanı kapla */
-    display: flex;
-    align-items: center; /* Dikeyde ortala */
-    justify-content: center; /* Yatayda ortala */
+    position: absolute; /* Sabit pozisyon */
+    top: 50%; /* Üstten %50 */
+    left: 50%; /* Soldan %50 */
+    transform: translate(-50%, -50%); /* Tam ortala */
+    width: 80%; /* Genişlik sınırı */
 }
 
 .question-text {
-    font-size: 24px;
+    font-size: 32px; /* 24px'den 32px'e yükseltildi */
     margin: 0;
     text-align: center; /* Tam ortala */
 }
