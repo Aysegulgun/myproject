@@ -60,7 +60,7 @@
 
 body {
     font-family: 'Rawest', 'Inter', sans-serif;
-    background-color: #1E1E20; /* Füme arka plan */
+    background-color: #DDA3C1; /* Pembe arka plan - en dış kısım */
     min-height: 100vh;
     display: flex;
     align-items: center;
