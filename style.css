@@ -63,9 +63,9 @@ body {
     background-color: #DDA3C1; /* Pembe arka plan - en dış kısım */
     min-height: 100vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
+    align-items: center; /* Dikey ortalama */
+    justify-content: center; /* Yatay ortalama */
+    padding: 0; /* Padding kaldırıldı - tam ortalama için */
     overflow-x: auto; /* Büyük boyutlar için scroll */
 }
 
@@ -73,27 +73,28 @@ body {
     width: 1200px; /* Küçültüldü: 1900 * 0.63 */
     height: 880px; /* Küçültüldü: 1400 * 0.63 */
     margin: 0 auto;
-    padding: 60px 60px 60px 60px; /* Tüm taraflardan eşit boşluk */
+    padding: 60px 125px 60px 125px; /* Sol/sağ padding ayarlandı - header hizalaması için */
     background-color: #DDA3C1; /* Pembe arka plan */
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Başlık üstte, panel ortada */
+    justify-content: center; /* İçeriği tam ortala */
     align-items: center;
 }
 
 /* Header Styles */
 .header {
-    text-align: right; /* Sağ tarafa hizalandı */
+    text-align: right; /* Sağa hizalandı - patch ile aynı yerde bitsin */
     margin-bottom: 20px;
-    width: 100%; /* Header tam genişlik alsın */
-    align-self: stretch; /* Container'ın genişliğini kullansın */
+    width: 100%; /* Container'ın tam genişliğini kullan */
+    align-self: stretch; /* Tam genişlik */
+    position: relative; /* Çizgi konumlandırma için */
 }
 
 .title {
     font-size: 24px;
-    font-weight: 600;
-    color: #333;
+    font-weight: 500; /* Medium - alt satır için */
+    color: #FFFFFF; /* Beyaz */
     letter-spacing: 0.5px;
     line-height: 1.2; /* Satırlar arası boşluk */
 }
@@ -360,13 +361,38 @@ body {
     font-family: 'Rawest', sans-serif;
     font-weight: 600; /* SemiBold */
     letter-spacing: 1px;
+    color: #FFFFFF; /* Beyaz */
 }
 
-.title-human-full {
+.title-exe {
+    font-family: 'Rawest', sans-serif;
+    font-weight: 600; /* SemiBold - ID ile aynı */
+    letter-spacing: 1px;
+    color: #FFFFFF; /* Beyaz yazı */
+    background-color: #52555A; /* Gri background - seçilmiş gibi */
+    padding: 2px 4px; /* Biraz padding selection efekti için */
+}
+
+.title-human {
     font-family: 'Rawest', sans-serif;
     font-weight: 500; /* Medium */
     font-style: normal;
-    color: #DDA3C1; /* Tamamı pembe */
+    color: #52555A; /* Gri renk - sadece human kelimesi */
+}
+
+.title-patch {
+    font-family: 'Rawest', sans-serif;
+    font-weight: 300; /* Light */
+    color: #FFFFFF; /* Beyaz */
+    position: relative;
+}
+
+
+
+.title-patch {
+    font-family: 'Rawest', sans-serif;
+    font-weight: 300; /* Light */
+    color: #FFFFFF; /* Beyaz */
 }
 
 /* System Title Fonts - Sadece SemiBold */
