@@ -31,17 +31,14 @@ function generateCompletionHTML(questionsAndAnswers) {
 
 // Page initialization
 document.addEventListener('DOMContentLoaded', function() {
-    const nameDisplayTop = document.querySelector('.ecem-word');
     const nameDisplayCongrats = document.querySelector('.name-display');
     const optionsSection = document.querySelector('.options-section');
     
     // Get user name from localStorage
     const userName = localStorage.getItem('userName');
-    if (userName) {
-        nameDisplayTop.textContent = `[${userName}]`;
+    if (userName && nameDisplayCongrats) {
         nameDisplayCongrats.textContent = userName;
-    } else {
-        nameDisplayTop.textContent = '[User]';
+    } else if (nameDisplayCongrats) {
         nameDisplayCongrats.textContent = 'User';
     }
     
