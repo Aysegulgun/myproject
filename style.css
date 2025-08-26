@@ -456,6 +456,7 @@ body {
     justify-content: flex-start; /* 2. sayfa için üstten başla */
     padding: 20px 50px 50px 50px; /* Üst padding azaltıldı */
     position: relative; /* Absolute positioning için */
+    /* Width, height ve border global .main-panel'dan alınır */
 }
 
 .question-section {
@@ -509,12 +510,10 @@ body {
 /* Page 3-10 Specific Styles - Same format as Page 2 */
 .page3.main-panel, .page4.main-panel, .page5.main-panel, .page6.main-panel, 
 .page7.main-panel, .page8.main-panel, .page9.main-panel, .page10.main-panel {
-    width: 950px; /* Page 2 ile aynı genişlik */
-    height: 630px; /* Page 2 ile aynı yükseklik */
+    /* Width ve height global .main-panel'dan alınır (950px x 630px) */
     overflow: visible; /* Scroll kaldırıldı */
     padding: 20px 50px 50px 50px; /* Page 2 ile aynı padding */
     justify-content: flex-start; /* Üstten başla */
-    border: 3px solid #FFFFFF; /* Beyaz border 3px */
     position: relative; /* Absolute positioning için */
 }
 
@@ -730,29 +729,7 @@ body {
     color: #DDA3C1;
 }
 
-/* Page 4 Specific Styles - Print version */
-.page4.main-panel {
-    width: 600px; /* 3. sayfa ile aynı */
-    height: 800px; /* 3. sayfa ile aynı */
-    overflow-y: auto; /* 3. sayfa ile aynı */
-    overflow-x: hidden; /* 3. sayfa ile aynı */
-    padding: 30px; /* 3. sayfa ile aynı */
-    justify-content: flex-start; /* 3. sayfa ile aynı */
-    border: 3px solid #FFFFFF; /* 3. sayfa ile aynı */
-}
 
-/* Page 4 Container - diğer sayfalardaki gibi aynı padding */
-.page4 .container {
-    padding: 60px 125px 60px 125px; /* İlk sayfalardaki gibi - header hizalaması için */
-}
-
-/* Page 4 Header - patch bitişi ile füme kutu bitişi aynı hizada */
-.page4 .header {
-    text-align: right; /* Sağa hizala - patch bitişi ile kutu bitişi aynı */
-    width: 100%;
-    align-self: stretch;
-    position: relative;
-}
 
 /* Print version Accept - not clickable, just text */
 .print-accept {
