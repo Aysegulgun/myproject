@@ -507,15 +507,24 @@ body {
     color: #DDA3C1;
 }
 
-/* Page 3-10 ve Completion Specific Styles - Same format as Page 2 */
+/* Page 3-10 Specific Styles - Same format as Page 2 */
 .page3.main-panel, .page4.main-panel, .page5.main-panel, .page6.main-panel, 
-.page7.main-panel, .page8.main-panel, .page9.main-panel, .page10.main-panel,
-.completion.main-panel {
+.page7.main-panel, .page8.main-panel, .page9.main-panel, .page10.main-panel {
     /* Width ve height global .main-panel'dan alınır (950px x 630px) */
     overflow: visible; /* Scroll kaldırıldı */
     padding: 20px 50px 50px 50px; /* Page 2 ile aynı padding */
     justify-content: flex-start; /* Üstten başla */
     position: relative; /* Absolute positioning için */
+}
+
+/* Completion Specific Styles - Scrollable format like old page 3 */
+.completion.main-panel {
+    width: 600px; /* Dar genişlik - eski 3. sayfa gibi */
+    height: 800px; /* Uzun yükseklik - eski 3. sayfa gibi */
+    overflow-y: auto; /* Dikey scroll */
+    overflow-x: hidden; /* Yatay scroll yok */
+    padding: 30px; /* İç boşluk */
+    justify-content: flex-start; /* Üstten başla */
 }
 
 /* Page 3-10 ve Completion Container - diğer sayfalardaki gibi aynı padding */

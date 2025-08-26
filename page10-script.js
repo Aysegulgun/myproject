@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Completion page function - go to completion page
-function completionPage() {
-    console.log('Page 10 - Going to completion page');
+// Next page function - go to completion page (answers list)
+function nextPage() {
+    console.log('Page 10 - Going to completion page with answers');
     window.location.href = 'completion.html';
 }
