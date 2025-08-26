@@ -106,7 +106,7 @@ body {
 
 /* Main Panel Styles */
 .main-panel {
-    background-color: #1E1E20; /* Füme renk */
+    background-color: #2A2A2D; /* Açık füme renk */
     border-radius: 0; /* Radius kaldırıldı */
     width: 950px; /* Küçültüldü: 1500 * 0.63 */
     height: 630px; /* Küçültüldü: 1000 * 0.63 */
