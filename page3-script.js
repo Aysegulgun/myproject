@@ -146,39 +146,6 @@ function nextPage() {
     window.location.href = 'page4.html';
 }
 
-// Reset form function for demo
-function resetForm() {
-    const nameInput = document.querySelector('.name-input');
-    const startButton = document.querySelector('.start-button');
-    const mainPanel = document.querySelector('.main-panel');
-    
-    nameInput.value = '';
-    nameInput.style.borderColor = '#52555A'; /* Normal gri renk */
-    startButton.textContent = 'Start';
-    startButton.disabled = false;
-    startButton.style.background = '#DDA3C1'; /* Güncel pembe renk */
-    
-    mainPanel.style.opacity = '1';
-    mainPanel.style.transform = 'scale(1)';
-}
+// Kullanılmayan fonksiyonlar kaldırıldı - temizlik
 
-// Enter key support
-document.addEventListener('keypress', function(event) {
-    if (event.key === 'Enter') {
-        const nameInput = document.querySelector('.name-input');
-        if (document.activeElement === nameInput) {
-            startJourney();
-        }
-    }
-});
-
-// Add shake animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        75% { transform: translateX(5px); }
-    }
-`;
-document.head.appendChild(style);
+// Shake animation kaldırıldı - titreme sorunu çözümü

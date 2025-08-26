@@ -13,15 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ecemElement.textContent = '[User]'; // Fallback if no name
     }
     
-    // Add loading animation
-    mainPanel.style.opacity = '0';
-    mainPanel.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-        mainPanel.style.transition = 'all 0.8s ease';
-        mainPanel.style.opacity = '1';
-        mainPanel.style.transform = 'translateY(0)';
-    }, 200);
+    // Loading animation kaldırıldı - titreme sorunu çözümü
 });
 
 // Accept button function
@@ -41,6 +33,13 @@ function acceptAction() {
 // Cancel button function
 function cancelAction() {
     console.log('User cancelled memory recovery');
-    alert('Memory recovery cancelled.');
-    // Here you can add navigation back or alternative flow
+    
+    // Get user name and store it
+    const userName = localStorage.getItem('userName');
+    if (userName) {
+        localStorage.setItem('userName', userName);
+    }
+    
+    // Navigate to page 3 (same as Accept)
+    window.location.href = 'page3.html';
 }

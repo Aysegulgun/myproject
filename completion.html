@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container page4">
+    <div class="container completion">
       <!-- Header -->
       <header class="header">
         <h1 class="title">
@@ -19,33 +19,37 @@
       </header>
 
       <!-- Main Panel -->
-      <main class="main-panel">
+      <main class="main-panel completion">
         <!-- System Header -->
         <div class="system-header">
           <div class="system-title-left">
             <img src="./images/danger.png" alt="Danger" class="danger-icon" />
-            <span class="system-prompt-word">MEMORY RECOVERY</span>
+            <span class="system-prompt-word">SYSTEM PROMPT</span>
           </div>
           <div class="user-name-display">
             <span class="ecem-word">[Ecem]</span>
           </div>
         </div>
 
-        <!-- Question Section -->
+        <!-- Completion Message Section -->
         <section class="question-section">
           <h2 class="question-text">
-            <span class="question-word">Enable TrueSelf.exe?</span>
+            <span class="question-word"
+              >Memory recovery completed successfully.</span
+            >
           </h2>
         </section>
 
         <!-- Buttons Section -->
         <section class="buttons-section">
-          <button class="accept-button" onclick="nextPage()">Accept</button>
-          <button class="cancel-button" onclick="nextPage()">Cancel</button>
+          <button class="accept-button" onclick="restartSession()">
+            Restart
+          </button>
+          <button class="cancel-button" onclick="exitSession()">Exit</button>
         </section>
       </main>
     </div>
 
-    <script src="page4-script.js"></script>
+    <script src="completion-script.js"></script>
   </body>
 </html>

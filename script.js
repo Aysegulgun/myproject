@@ -5,15 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainPanel = document.querySelector('.main-panel');
     const nameInput = document.querySelector('.name-input');
     
-    // Add loading animation
-    mainPanel.style.opacity = '0';
-    mainPanel.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-        mainPanel.style.transition = 'all 0.8s ease';
-        mainPanel.style.opacity = '1';
-        mainPanel.style.transform = 'translateY(0)';
-    }, 200);
+    // Loading animation kaldırıldı - titreme sorunu çözümü
     
     // Focus on input after load
     setTimeout(() => {
@@ -28,14 +20,12 @@ function startJourney() {
     const name = nameInput.value.trim();
     
     if (!name) {
-        // Shake animation for empty input
-        nameInput.style.animation = 'shake 0.5s ease';
+        // Shake animation kaldırıldı - sadece border rengi değişir
         nameInput.style.borderColor = '#DDA3C1'; /* Start butonunun pembe rengi */
         
         setTimeout(() => {
-            nameInput.style.animation = '';
             nameInput.style.borderColor = '#52555A'; /* Normal gri renk */
-        }, 500);
+        }, 1000);
         
         return;
     }
@@ -62,8 +52,7 @@ function resetForm() {
     startButton.disabled = false;
     startButton.style.background = '#DDA3C1'; /* Güncel pembe renk */
     
-    mainPanel.style.opacity = '1';
-    mainPanel.style.transform = 'scale(1)';
+    // Transform efektleri kaldırıldı - titreme sorunu çözümü
 }
 
 // Enter key support
@@ -76,13 +65,4 @@ document.addEventListener('keypress', function(event) {
     }
 });
 
-// Add shake animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes shake {
-        0%, 100% { transform: translateX(0); }
-        25% { transform: translateX(-5px); }
-        75% { transform: translateX(5px); }
-    }
-`;
-document.head.appendChild(style);
+// Shake animation kaldırıldı - titreme sorunu çözümü
