@@ -463,7 +463,7 @@ body {
     margin-bottom: 0; /* Margin kaldırıldı */
     text-align: center;
     position: absolute; /* Sabit pozisyon */
-    top: 50%; /* Üstten %50 */
+    top: 42%; /* Biraz aşağıya alındı */
     left: 50%; /* Soldan %50 */
     transform: translate(-50%, -50%); /* Tam ortala */
     width: 80%; /* Genişlik sınırı */
@@ -481,7 +481,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Sabit pozisyon */
-    bottom: 150px; /* Yerden 150px yükseklik */
+    bottom: 200px; /* Yukarıya taşındı - 150px'den 200px */
     left: 60px; /* Sol padding */
     right: 60px; /* Sağ padding */
 }
@@ -579,7 +579,7 @@ body {
     margin-bottom: 0; /* Margin kaldırıldı */
     text-align: center;
     position: absolute; /* Sabit pozisyon */
-    top: 50%; /* Üstten %50 */
+    top: 42%; /* Biraz aşağıya alındı */
     left: 50%; /* Soldan %50 */
     transform: translate(-50%, -50%); /* Tam ortala */
     width: 80%; /* Genişlik sınırı */
@@ -602,7 +602,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Sabit pozisyon */
-    bottom: 150px; /* Yerden 150px yükseklik */
+    bottom: 200px; /* Yukarıya taşındı - 150px'den 200px */
     left: 60px; /* Sol padding */
     right: 60px; /* Sağ padding */
 }
