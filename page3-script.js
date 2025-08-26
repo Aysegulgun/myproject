@@ -95,55 +95,54 @@ function generateQuestionHTML(questions) {
     `).join('');
 }
 
-// Smooth loading animation
+// Current question tracking
+let currentQuestionIndex = 0;
+let askedQuestions = [];
+
+// Function to get a random unasked question
+function getRandomQuestion() {
+    // Get questions that haven't been asked yet
+    const availableQuestions = questionDatabase.filter(q => !askedQuestions.includes(q));
+    
+    // If all questions are asked, reset the list
+    if (availableQuestions.length === 0) {
+        askedQuestions = [];
+        return questionDatabase[Math.floor(Math.random() * questionDatabase.length)];
+    }
+    
+    // Get random question from available ones
+    const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+    const selectedQuestion = availableQuestions[randomIndex];
+    
+    // Add to asked questions
+    askedQuestions.push(selectedQuestion);
+    
+    return selectedQuestion;
+}
+
+// Function to load new question
+function loadNewQuestion() {
+    const questionElement = document.getElementById('current-question');
+    const newQuestion = getRandomQuestion();
+    questionElement.textContent = newQuestion;
+}
+
+// Page initialization
 document.addEventListener('DOMContentLoaded', function() {
-    const mainPanel = document.querySelector('.main-panel');
-    const nameDisplay = document.querySelector('.name-display');
-    const optionsSection = document.querySelector('.options-section');
+    const nameDisplay = document.querySelector('.ecem-word');
     
     // Get user name from localStorage
     const userName = localStorage.getItem('userName');
     if (userName) {
-        nameDisplay.textContent = userName;
+        nameDisplay.textContent = `[${userName}]`;
     } else {
-        nameDisplay.textContent = 'User';
+        nameDisplay.textContent = '[User]';
     }
-    
-    // Generate random questions
-    const randomQuestions = getRandomQuestions(7);
-    optionsSection.innerHTML = generateQuestionHTML(randomQuestions);
-    
-    // Store questions for print page
-    localStorage.setItem('currentQuestions', JSON.stringify(randomQuestions));
-    
-    // Add loading animation
-    mainPanel.style.opacity = '0';
-    mainPanel.style.transform = 'translateY(20px)';
-    
-    setTimeout(() => {
-        mainPanel.style.transition = 'all 0.8s ease';
-        mainPanel.style.opacity = '1';
-        mainPanel.style.transform = 'translateY(0)';
-    }, 200);
 });
 
-// Option accept function
-function acceptOption(question) {
-    console.log('Option accepted:', question);
-    alert(`"${question}" - Option accepted! Processing...`);
-}
-
-// Print function - redirect to print page
-function printPage() {
-    console.log('Print requested - redirecting to print page');
-    
-    // Store user name
-    const userName = localStorage.getItem('userName');
-    if (userName) {
-        localStorage.setItem('userName', userName);
-    }
-    
-    // Navigate to print page
+// Next page function - go to page4
+function nextPage() {
+    console.log('Page 3 - Going to page 4');
     window.location.href = 'page4.html';
 }
 

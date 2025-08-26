@@ -1,4 +1,4 @@
-// Page 4 Script for ID.EXE - Memory Recovery
+// Page 7 Script for ID.EXE - Memory Recovery
 
 // Page initialization
 document.addEventListener('DOMContentLoaded', function() {
@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Next page function - go to page5
+// Next page function - go to page8
 function nextPage() {
-    console.log('Page 4 - Going to page 5');
-    window.location.href = 'page5.html';
+    console.log('Page 7 - Going to page 8');
+    window.location.href = 'page8.html';
 }

@@ -506,28 +506,115 @@ body {
     color: #DDA3C1;
 }
 
-/* Page 3 Specific Styles - Long narrow format with scroll */
-.page3.main-panel {
-    width: 600px; /* Dar genişlik */
-    height: 800px; /* Uzun yükseklik */
-    overflow-y: auto; /* Dikey scroll */
-    overflow-x: hidden; /* Yatay scroll yok */
-    padding: 30px; /* İç boşluk */
+/* Page 3-10 Specific Styles - Same format as Page 2 */
+.page3.main-panel, .page4.main-panel, .page5.main-panel, .page6.main-panel, 
+.page7.main-panel, .page8.main-panel, .page9.main-panel, .page10.main-panel {
+    width: 950px; /* Page 2 ile aynı genişlik */
+    height: 630px; /* Page 2 ile aynı yükseklik */
+    overflow: visible; /* Scroll kaldırıldı */
+    padding: 20px 50px 50px 50px; /* Page 2 ile aynı padding */
     justify-content: flex-start; /* Üstten başla */
     border: 3px solid #FFFFFF; /* Beyaz border 3px */
+    position: relative; /* Absolute positioning için */
 }
 
-/* Page 3 Container - diğer sayfalardaki gibi aynı padding */
-.page3 .container {
+/* Page 3-10 Container - diğer sayfalardaki gibi aynı padding */
+.page3 .container, .page4 .container, .page5 .container, .page6 .container,
+.page7 .container, .page8 .container, .page9 .container, .page10 .container {
     padding: 60px 125px 60px 125px; /* İlk sayfalardaki gibi - header hizalaması için */
 }
 
-/* Page 3 Header - patch bitişi ile füme kutu bitişi aynı hizada */
-.page3 .header {
+/* Page 3-10 Header - patch bitişi ile füme kutu bitişi aynı hizada */
+.page3 .header, .page4 .header, .page5 .header, .page6 .header,
+.page7 .header, .page8 .header, .page9 .header, .page10 .header {
     text-align: right; /* Sağa hizala - patch bitişi ile kutu bitişi aynı */
     width: 100%;
     align-self: stretch;
     position: relative;
+}
+
+/* Page 3-10 System Header - Page 2 ile aynı stiller */
+.page3 .system-header, .page4 .system-header, .page5 .system-header, .page6 .system-header,
+.page7 .system-header, .page8 .system-header, .page9 .system-header, .page10 .system-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Üstte hizala */
+    width: 100%;
+    margin-bottom: 30px; /* Daha az boşluk */
+    margin-top: 0; /* Üstte boşluk yok */
+}
+
+.page3 .system-title-left, .page4 .system-title-left, .page5 .system-title-left, .page6 .system-title-left,
+.page7 .system-title-left, .page8 .system-title-left, .page9 .system-title-left, .page10 .system-title-left {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* İkon ve yazı arası boşluk */
+    margin-top: 0; /* Üstte boşluk yok */
+}
+
+.page3 .danger-icon, .page4 .danger-icon, .page5 .danger-icon, .page6 .danger-icon,
+.page7 .danger-icon, .page8 .danger-icon, .page9 .danger-icon, .page10 .danger-icon {
+    height: 24px; /* SYSTEM PROMPT font-size ile aynı - 24px */
+    width: auto;
+}
+
+/* Page 3-10 Question Section - Page 2 ile aynı */
+.page3 .question-section, .page4 .question-section, .page5 .question-section, .page6 .question-section,
+.page7 .question-section, .page8 .question-section, .page9 .question-section, .page10 .question-section {
+    margin-bottom: 0; /* Margin kaldırıldı */
+    text-align: center;
+    position: absolute; /* Sabit pozisyon */
+    top: 50%; /* Üstten %50 */
+    left: 50%; /* Soldan %50 */
+    transform: translate(-50%, -50%); /* Tam ortala */
+    width: 80%; /* Genişlik sınırı */
+}
+
+.page3 .question-text, .page4 .question-text, .page5 .question-text, .page6 .question-text,
+.page7 .question-text, .page8 .question-text, .page9 .question-text, .page10 .question-text {
+    font-size: 32px; /* Page 2 ile aynı */
+    margin: 0;
+    text-align: center; /* Tam ortala */
+}
+
+/* Page 3-10 Buttons Section - Page 2 ile aynı */
+.page3 .buttons-section, .page4 .buttons-section, .page5 .buttons-section, .page6 .buttons-section,
+.page7 .buttons-section, .page8 .buttons-section, .page9 .buttons-section, .page10 .buttons-section {
+    display: flex;
+    gap: 40px; /* Butonlar arası mesafe */
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Sabit pozisyon */
+    bottom: 150px; /* Yerden 150px yükseklik */
+    left: 60px; /* Sol padding */
+    right: 60px; /* Sağ padding */
+}
+
+.page3 .accept-button, .page3 .cancel-button, .page4 .accept-button, .page4 .cancel-button,
+.page5 .accept-button, .page5 .cancel-button, .page6 .accept-button, .page6 .cancel-button,
+.page7 .accept-button, .page7 .cancel-button, .page8 .accept-button, .page8 .cancel-button,
+.page9 .accept-button, .page9 .cancel-button, .page10 .accept-button, .page10 .cancel-button {
+    background-color: #DDA3C1; /* Pembe renk */
+    color: #FFFFFF;
+    border: 3px solid #FFFFFF; /* Beyaz border 3px */
+    border-radius: 4px; /* Start buton ile aynı */
+    padding: 9px 25px; /* Start buton ile aynı */
+    font-family: 'Rawest', sans-serif;
+    font-weight: 300; /* Light */
+    font-size: 28px; /* Start buton ile aynı */
+    letter-spacing: 0.3px; /* Start buton ile aynı */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex: 1; /* Eşit genişlik */
+    max-width: 200px; /* Genişlik sınırı */
+}
+
+.page3 .accept-button:hover, .page3 .cancel-button:hover, .page4 .accept-button:hover, .page4 .cancel-button:hover,
+.page5 .accept-button:hover, .page5 .cancel-button:hover, .page6 .accept-button:hover, .page6 .cancel-button:hover,
+.page7 .accept-button:hover, .page7 .cancel-button:hover, .page8 .accept-button:hover, .page8 .cancel-button:hover,
+.page9 .accept-button:hover, .page9 .cancel-button:hover, .page10 .accept-button:hover, .page10 .cancel-button:hover {
+    background-color: transparent;
+    color: #DDA3C1;
 }
 
 .congratulations-section {
