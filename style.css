@@ -725,6 +725,32 @@ body {
     color: #DDA3C1;
 }
 
+/* Completion page answer styles */
+.option-answer {
+    font-family: 'Rawest', sans-serif;
+    font-weight: 600; /* SemiBold */
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 4px;
+    margin-left: auto; /* Sağa yasla */
+}
+
+.option-answer.accept {
+    color: #DDA3C1; /* Pembe renk - Accept için */
+}
+
+.option-answer.cancel {
+    color: #52555A; /* Enter tuşu border rengi */
+}
+
+.no-answers .option-text {
+    text-align: center;
+    width: 100%;
+    font-style: italic;
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
 .print-section {
     text-align: center;
     margin-top: 20px;

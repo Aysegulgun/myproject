@@ -18,3 +18,17 @@ function nextPage() {
     console.log('Page 9 - Going to page 10');
     window.location.href = 'page10.html';
 }
+
+// Accept answer function
+function acceptAnswer() {
+    console.log('User accepted knowing future');
+    saveAnswer(9, 'Accept');
+    window.location.href = 'page10.html';
+}
+
+// Cancel answer function
+function cancelAnswer() {
+    console.log('User declined knowing future');
+    saveAnswer(9, 'Cancel');
+    window.location.href = 'page10.html';
+}

@@ -146,6 +146,20 @@ function nextPage() {
     window.location.href = 'page4.html';
 }
 
+// Accept answer function
+function acceptAnswer() {
+    console.log('User accepted troubleshooting');
+    saveAnswer(3, 'Accept');
+    window.location.href = 'page4.html';
+}
+
+// Cancel answer function  
+function cancelAnswer() {
+    console.log('User declined troubleshooting');
+    saveAnswer(3, 'Cancel');
+    window.location.href = 'page4.html';
+}
+
 // Kullanılmayan fonksiyonlar kaldırıldı - temizlik
 
 // Shake animation kaldırıldı - titreme sorunu çözümü

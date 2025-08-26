@@ -18,3 +18,17 @@ function nextPage() {
     console.log('Page 8 - Going to page 9');
     window.location.href = 'page9.html';
 }
+
+// Accept answer function
+function acceptAnswer() {
+    console.log('User accepted AI sentience');
+    saveAnswer(8, 'Accept');
+    window.location.href = 'page9.html';
+}
+
+// Cancel answer function
+function cancelAnswer() {
+    console.log('User declined AI sentience');
+    saveAnswer(8, 'Cancel');
+    window.location.href = 'page9.html';
+}

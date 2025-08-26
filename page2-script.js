@@ -20,11 +20,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function acceptAction() {
     console.log('User accepted memory recovery');
     
-    // Get user name and store it
-    const userName = localStorage.getItem('userName');
-    if (userName) {
-        localStorage.setItem('userName', userName);
-    }
+    // Save the answer
+    saveAnswer(2, 'Accept');
     
     // Navigate to page 3
     window.location.href = 'page3.html';
@@ -34,12 +31,9 @@ function acceptAction() {
 function cancelAction() {
     console.log('User cancelled memory recovery');
     
-    // Get user name and store it
-    const userName = localStorage.getItem('userName');
-    if (userName) {
-        localStorage.setItem('userName', userName);
-    }
+    // Save the answer
+    saveAnswer(2, 'Cancel');
     
-    // Navigate to page 3 (same as Accept)
+    // Navigate to page 3
     window.location.href = 'page3.html';
 }

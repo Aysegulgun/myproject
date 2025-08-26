@@ -1,26 +1,32 @@
-// Completion Page Script for ID.EXE - Shows all 8 questions answered
+// Completion Page Script for ID.EXE - Shows all questions and answers
 
-// 8 questions from the journey
-const answeredQuestions = [
-    "Do you want to recover old memories?",
-    "System detected unresolved feelings. Would you like to troubleshoot now?",
-    "Would you like to explore new realities?",
-    "Have you ever experienced digital dreams?",
-    "Are you ready to face your deepest fears?",
-    "Would you upload your brain to the cloud?",
-    "Can artificial intelligence become sentient?",
-    "Would you want to know your future?",
-    "Would you accept immortality if offered?"
-];
+// Function to get all answered questions from localStorage
+function getAnsweredQuestions() {
+    const answers = localStorage.getItem('userAnswers');
+    if (answers) {
+        return JSON.parse(answers);
+    }
+    return []; // Eğer hiç cevap yoksa boş dizi döndür
+}
 
-// Function to generate question HTML for completion page
-function generateCompletionHTML(questions) {
-    return questions.map(question => `
-        <div class="option-item">
-            <span class="option-text">${question}</span>
-            <span class="option-accept">Accept</span>
-        </div>
-    `).join('');
+// Function to generate question HTML for completion page with answers
+function generateCompletionHTML(questionsAndAnswers) {
+    if (questionsAndAnswers.length === 0) {
+        return '<div class="no-answers"><span class="option-text">Henüz hiçbir soruya cevap verilmemiş.</span></div>';
+    }
+    
+    return questionsAndAnswers.map(item => {
+        // Convert "Decline" to "Cancel" for display
+        const displayAnswer = item.answer === 'Decline' ? 'Cancel' : item.answer;
+        const cssClass = item.answer.toLowerCase() === 'decline' ? 'cancel' : item.answer.toLowerCase();
+        
+        return `
+            <div class="option-item">
+                <span class="option-text">${item.question}</span>
+                <span class="option-answer ${cssClass}">${displayAnswer}</span>
+            </div>
+        `;
+    }).join('');
 }
 
 // Page initialization
@@ -39,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         nameDisplayCongrats.textContent = 'User';
     }
     
-    // Generate all answered questions
+    // Generate all answered questions with their answers
+    const answeredQuestions = getAnsweredQuestions();
     optionsSection.innerHTML = generateCompletionHTML(answeredQuestions);
 });
 

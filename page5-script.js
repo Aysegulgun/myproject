@@ -18,3 +18,17 @@ function nextPage() {
     console.log('Page 5 - Going to page 6');
     window.location.href = 'page6.html';
 }
+
+// Accept answer function
+function acceptAnswer() {
+    console.log('User accepted digital dreams');
+    saveAnswer(5, 'Accept');
+    window.location.href = 'page6.html';
+}
+
+// Cancel answer function
+function cancelAnswer() {
+    console.log('User declined digital dreams');
+    saveAnswer(5, 'Cancel');
+    window.location.href = 'page6.html';
+}
