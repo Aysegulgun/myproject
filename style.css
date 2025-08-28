@@ -517,14 +517,14 @@ body {
     position: relative; /* Absolute positioning için */
 }
 
-/* Completion Specific Styles - Scrollable format like old page 3 */
+/* Completion Specific Styles - Same format as other pages, no scroll */
 .completion.main-panel {
-    width: 600px; /* Dar genişlik - eski 3. sayfa gibi */
-    height: 800px; /* Uzun yükseklik - eski 3. sayfa gibi */
-    overflow-y: auto; /* Dikey scroll */
-    overflow-x: hidden; /* Yatay scroll yok */
-    padding: 30px; /* İç boşluk */
+    width: 950px; /* Diğer sayfalarla aynı genişlik */
+    height: 630px; /* Diğer sayfalarla aynı yükseklik */
+    overflow: visible; /* Scroll kaldırıldı - diğer sayfalar gibi */
+    padding: 20px 50px 50px 50px; /* Diğer sayfalarla aynı padding */
     justify-content: flex-start; /* Üstten başla */
+    position: relative; /* Absolute positioning için */
 }
 
 /* Page 3-10 ve Completion Container - diğer sayfalardaki gibi aynı padding */
@@ -579,7 +579,7 @@ body {
     margin-bottom: 0; /* Margin kaldırıldı */
     text-align: center;
     position: absolute; /* Sabit pozisyon */
-    top: 42%; /* Biraz aşağıya alındı */
+    top: 38%; /* Yukarıya alındı - daha az boşluk için */
     left: 50%; /* Soldan %50 */
     transform: translate(-50%, -50%); /* Tam ortala */
     width: 80%; /* Genişlik sınırı */
@@ -602,7 +602,7 @@ body {
     justify-content: center;
     align-items: center;
     position: absolute; /* Sabit pozisyon */
-    bottom: 200px; /* Yukarıya taşındı - 150px'den 200px */
+    bottom: 120px; /* Daha yukarıya taşındı - sorular arası boşluk azaltıldı */
     left: 60px; /* Sol padding */
     right: 60px; /* Sağ padding */
 }
@@ -638,15 +638,15 @@ body {
 
 .congratulations-section {
     text-align: center;
-    margin-bottom: 30px;
-    margin-top: 40px; /* Üstte daha fazla boşluk */
+    margin-bottom: 8px; /* Daha da azaltıldı */
+    margin-top: 15px; /* Daha da azaltıldı */
 }
 
 .congratulations-title {
-    font-size: 28px;
+    font-size: 24px; /* Küçültüldü */
     font-weight: 700; /* Bold */
     color: #FFFFFF;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Azaltıldı */
     font-family: 'Rawest', sans-serif;
 }
 
@@ -660,41 +660,51 @@ body {
 }
 
 .update-status {
-    font-size: 34px; /* 32px + 2px = 34px */
+    font-size: 30px; /* Küçültüldü - daha kompakt */
     font-weight: 500; /* Medium */
     color: #FFFFFF;
     margin: 0;
     font-family: 'Rawest', sans-serif;
-    line-height: 1.2;
+    line-height: 1.1; /* Daha sıkı satır aralığı */
 }
 
 .updated-word {
     font-weight: 500; /* Medium */
 }
 
+.you-word {
+    font-family: 'Rawest', sans-serif;
+    font-weight: 300; /* Light */
+}
+
+.now-word {
+    font-family: 'Rawest', sans-serif;
+    font-weight: 300; /* Light */
+}
+
 .description-section {
-    margin-bottom: 40px;
+    margin-bottom: 10px; /* Daha da azaltıldı */
     text-align: center;
 }
 
 .description-text {
-    font-size: 20px; /* 16px + 4px = 20px (sorulardan 4px büyük) */
+    font-size: 18px; /* Küçültüldü - daha kompakt */
     font-weight: 300; /* Light */
     color: #FFFFFF;
     font-family: 'Rawest', sans-serif;
-    line-height: 1.5;
+    line-height: 1.4; /* Daha sıkı satır aralığı */
     margin: 0;
 }
 
 .options-section {
-    margin-bottom: 40px;
+    margin-bottom: 10px; /* Daha da azaltıldı */
 }
 
 .option-item {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
-    padding: 10px 0;
+    margin-bottom: 3px; /* Daha da azaltıldı */
+    padding: 2px 0; /* Daha da azaltıldı */
 }
 
 .option-text {
@@ -753,7 +763,7 @@ body {
 
 .print-section {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 5px; /* Daha da azaltıldı */
 }
 
 .print-button {
