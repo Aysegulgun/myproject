@@ -850,11 +850,14 @@ body {
     }
     
     .option-text {
-        font-size: 10px !important;
+        font-size: 14px !important; /* Daha büyük font */
+        line-height: 1.4 !important;
+        width: 100% !important; /* Tam genişlik */
     }
     
     .option-answer {
-        font-size: 8px !important;
+        font-size: 12px !important; /* Daha büyük cevap */
+        margin-left: 10px !important; /* Sağa yasla */
     }
     
     /* Boşlukları print için minimize et */
@@ -874,8 +877,12 @@ body {
     }
     
     .option-item {
-        margin-bottom: 1px !important;
-        padding: 1px 0 !important;
+        margin-bottom: 3px !important; /* Biraz daha boşluk */
+        padding: 2px 0 !important;
+        display: flex !important;
+        justify-content: space-between !important; /* Soru sol, cevap sağ */
+        align-items: flex-start !important;
+        width: 100% !important;
     }
 }
 
