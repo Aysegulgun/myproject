@@ -669,7 +669,7 @@ body {
 }
 
 .updated-word {
-    font-weight: 500; /* Medium */
+    font-weight: 300; /* Light - koyu olmasın */
 }
 
 .you-word {
@@ -838,6 +838,10 @@ body {
     
     .update-status {
         font-size: 18px !important;
+    }
+    
+    .updated-word {
+        font-weight: 300 !important; /* Print'te koyu olmasın - Light yap */
     }
     
     .description-text {

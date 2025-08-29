@@ -33,8 +33,9 @@ function startJourney() {
     // Direct redirect to page 2
     console.log('Journey started for user:', name);
     
-    // Store user name for next screen
-    localStorage.setItem('userName', name);
+    // Store user name for next screen - capitalize first letter
+    const capitalizedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    localStorage.setItem('userName', capitalizedName);
     
     // Navigate to page 2 immediately
     window.location.href = 'page2.html';
