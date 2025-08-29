@@ -683,6 +683,7 @@ body {
 }
 
 .description-section {
+    margin-top: 15px; /* NOW altındaki cümleyi biraz aşağı al */
     margin-bottom: 10px; /* Daha da azaltıldı */
     text-align: center;
 }
@@ -697,6 +698,7 @@ body {
 }
 
 .options-section {
+    margin-top: 15px; /* Soruları biraz aşağı al */
     margin-bottom: 10px; /* Daha da azaltıldı */
 }
 
@@ -763,11 +765,12 @@ body {
 
 .print-section {
     text-align: center;
-    margin-top: 5px; /* Daha da azaltıldı */
+    margin-top: 20px; /* Füme kutunun altında boşluk */
+    width: 100%; /* Container'ın tam genişliğini kullan */
 }
 
 .print-button {
-    background-color: #DDA3C1; /* Pembe renk */
+    background-color: #2A2A2D; /* Füme renk - main-panel ile aynı */
     color: #FFFFFF;
     border: 3px solid #FFFFFF; /* Beyaz border 3px - diğer butonlarla aynı */
     border-radius: 4px; /* Diğer butonlarla aynı */
@@ -782,7 +785,94 @@ body {
 
 .print-button:hover {
     background-color: transparent;
-    color: #DDA3C1;
+    color: #2A2A2D; /* Hover'da füme yazı rengi */
+}
+
+/* Print Media Query - 8cm genişlik için */
+@media print {
+    /* Print butonunu gizle */
+    .print-section {
+        display: none !important;
+    }
+    
+    /* Sayfa boyutunu 8cm genişlik için ayarla */
+    @page {
+        size: 8cm auto; /* 8cm genişlik, yükseklik otomatik */
+        margin: 5mm; /* Minimal margin */
+    }
+    
+    /* Container'ı print için ayarla */
+    .container {
+        width: 100% !important;
+        height: auto !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        background-color: white !important;
+    }
+    
+    /* Main panel'i print için ayarla */
+    .main-panel {
+        width: 100% !important;
+        height: auto !important;
+        padding: 10px !important;
+        margin: 0 !important;
+        background-color: white !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+    
+    /* Header'ı print için ayarla */
+    .header {
+        margin-bottom: 10px !important;
+    }
+    
+    /* Font boyutlarını print için küçült */
+    .title {
+        font-size: 14px !important;
+    }
+    
+    .congratulations-title {
+        font-size: 16px !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .update-status {
+        font-size: 18px !important;
+    }
+    
+    .description-text {
+        font-size: 12px !important;
+        line-height: 1.3 !important;
+    }
+    
+    .option-text {
+        font-size: 10px !important;
+    }
+    
+    .option-answer {
+        font-size: 8px !important;
+    }
+    
+    /* Boşlukları print için minimize et */
+    .congratulations-section {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .description-section {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+    
+    .options-section {
+        margin-top: 5px !important;
+        margin-bottom: 0 !important;
+    }
+    
+    .option-item {
+        margin-bottom: 1px !important;
+        padding: 1px 0 !important;
+    }
 }
 
 
